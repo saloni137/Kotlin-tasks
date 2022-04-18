@@ -8,10 +8,10 @@ fun main(args: Array<String>) {
     var time = listOf<String>("10AM","11PM")
     
     var output:String? = when(args[0]){
-        "Name" -> names.find{it === args[1]}
-        "Source" -> source.find{it === args[1]}
-        "Destination" -> dest.find{it === args[1]}
-        "DepartureTime" -> time.find{it === args[1]}
+        "Name" -> names.find{it == args[1]}
+        "Source" -> source.find{it == args[1]}
+        "Destination" -> dest.find{it == args[1]}
+        "DepartureTime" -> time.find{it == args[1]}
         else -> "No Match Found"
     }
     	
