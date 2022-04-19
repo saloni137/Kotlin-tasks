@@ -1,5 +1,9 @@
-abstract class Beverage{
-    abstract fun cleanPot()
+interface BeverageMethods {
+    fun cleanPot()
+    fun getMixture()
+    fun addIngredients()
+}
+abstract class Beverage: BeverageMethods {
     fun addWater(){
         println("Adding hot water");
     }
@@ -9,8 +13,6 @@ abstract class Beverage{
     fun addSugar(){
         println("Adding sugar");
     }
-    abstract fun getMixture()
-    abstract fun addIngredients()
     fun getBevrage(){
         cleanPot()
         getMixture()
