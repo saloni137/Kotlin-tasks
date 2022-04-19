@@ -54,12 +54,11 @@ class tea : Beverage(){
 
 fun main(args:Array<String>) {
    val type = args[0]
-   var beverage: Beverage?
-   if(type == "1"){
-       beverage = tea()
+   val beverage: Beverage =  if(type == "1"){
+       tea()
    }
    else {
-       beverage = coffee()
+       coffee()
    }
    beverage.getBevrage()
 }
